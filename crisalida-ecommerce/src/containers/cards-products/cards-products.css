@@ -1,0 +1,16 @@
+.cards-bs{
+    margin:auto;
+    margin-top: 70px;
+    display: inline-block;
+}
+
+.cart-button{
+    background: rgb(142, 2, 155);
+    margin-top: 20px;
+}
+
+.cart-icon2{
+    text-align: center;
+    margin: auto;
+    padding: auto;
+}

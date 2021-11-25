@@ -6,3 +6,11 @@
 .navbar-brand{
     margin-left:  40px;
 }
+
+.spann{
+    color: rgb(199, 18, 115);
+}
+
+#navbarScrollingDropdown{
+    color: white;
+}
