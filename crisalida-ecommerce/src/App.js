@@ -2,14 +2,14 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import NavbarComp from './containers/Navbar/NavbarComp'
 import ItemListContainers from './containers/itemListContainer/ItemListContainers';
-import CounterContainer from './containers/cards-products/cards-products';
+import CounterContainer from './containers/cards-products/CounterContainer';
 
 function App() {
   return (
     <div className="App">
       <NavbarComp/>
       <ItemListContainers greeting="Terrícolas" />
-      <CounterContainer />
+      <CounterContainer initial={1} stock={5} />
     </div>
   );
 }
