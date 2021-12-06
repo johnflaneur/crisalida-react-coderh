@@ -13,7 +13,7 @@ export default function NavbarComp() {
         <div>
                 <Navbar bg="dark" expand="lg">
                     <Container fluid>
-                        <Navbar.Brand  href="#" className="navbar-brand text-light">Crisálida <span className='spann'>Cosmética Natural</span></Navbar.Brand>
+                        <Navbar.Brand  href="#" className="navbar-brand text-light">Final Fantasy <span className='spann'> Land</span></Navbar.Brand>
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav
@@ -22,7 +22,7 @@ export default function NavbarComp() {
                                 navbarScroll
                             >
                                 <Nav.Link href="#action1" className="text-light">Inicio</Nav.Link>
-                                <Nav.Link href="#action2" className="text-light">Sobre Crisálida</Nav.Link>
+                                <Nav.Link href="#action2" className="text-light">Sobre FF</Nav.Link>
                                 <NavDropdown className="products-title" title="Productos" id="navbarScrollingDropdown">
                                     <NavDropdown.Item href="#action3">Destacados</NavDropdown.Item>
                                     <NavDropdown.Item href="#action4">Detalles</NavDropdown.Item>

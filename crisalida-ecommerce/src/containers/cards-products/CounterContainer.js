@@ -29,7 +29,7 @@ export default function CounterContainer({initial,stock,onAdd}) {
                 <Card className="cards-bs" style={{ width: '18rem' }}>
             {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                 <Card.Body>
-                    <Card.Title>Shampoo Sólido de Rosas</Card.Title>
+                    <Card.Title>Final Fantasy 7</Card.Title>
                         <Card.Text>
                             
                          </Card.Text>
