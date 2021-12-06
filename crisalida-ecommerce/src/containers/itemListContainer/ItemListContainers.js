@@ -1,10 +1,25 @@
-import React from 'react';
-import '../../containers/itemListContainer/itemListContainerStyle.css'
+import React, {useEffect, useState} from 'react';
+import '../../containers/itemListContainer/itemListContainerStyle.css';
 
-export default function ItemListContainers({greeting}) {
-    return (
-        <div className="container-list">
-            <h2 className="container-list__text"> Holaa, este es un saludo para todos los {greeting}</h2>
-        </div>
-    )
+const ItemListContainers = () =>{
+    const [games, setGames] = useState([]);
+
+    useEffect(() =>{
+       
+            fetch("https://www.moogleapi.com/api/v1/games");
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setGames(data.results);
+            })
+            .catch()
+            return (
+                <div>
+                    <Itemlist games={games}/>
+                </div>
+             )
+        })
+
+       
 }
+export default ItemListContainers
