@@ -1,16 +1,35 @@
-import './App.css';
+
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-import NavbarComp from './containers/Navbar/NavbarComp'
-import ItemListContainers from './containers/itemListContainer/ItemListContainers';
-import CounterContainer from './containers/cards-products/CounterContainer';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+// import { AppRouter } from './router/AppRouter'; 
+import { Routes, Route,Navigate } from 'react-router-dom'
+import { CartProvider } from './context/contextCart';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { CartView } from './components/CartView/cartView';
+import { Checkout } from './components/Checkout/Checkout';
+import {NavbarComp} from './components/Navbar-Container/NavbarComp';
 
 function App() {
   return (
-    <div className="App">
-      <NavbarComp/>
-      <ItemListContainers />
-      <CounterContainer initial={1} stock={5} />
-    </div>
+    <CartProvider>
+
+      <BrowserRouter>
+        <NavbarComp/>
+    
+          <Routes>
+            <Route path="/" element={ <ItemListContainer /> }/>
+            <Route path="/products/:cardId" element={ <ItemListContainer /> }/>
+            <Route path="/detail/:itemId" element={ <ItemDetailContainer />} />
+            <Route path="/cart" element={ <CartView /> } />
+            <Route path="/checkout" element={ <Checkout/> } />
+            <Route path="*" element={ <Navigate to="/" /> } />
+          </Routes> 
+
+      </BrowserRouter>
+
+    </CartProvider>
   );
 }
 

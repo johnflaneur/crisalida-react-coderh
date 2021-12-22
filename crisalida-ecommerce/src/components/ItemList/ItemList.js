@@ -1,14 +1,16 @@
-import React from 'react';
-import Item from '../Item/Item';
+import React from 'react'
+import { Container, Row } from 'react-bootstrap'
+import { Item } from '../Item/Item'
 
-const ItemList =  ({games,}) =>{
-    return(
-        <div>
-        {games.map( ffGames => {
-            return <Item games={ffGames}/>
-        })}
-        </div>
+export const ItemList = ({items}) => {
+
+    return (
+        <Container className="my-5">
+            <h2>Crisálida - Productos</h2>
+            <hr/>
+            <Row>
+                {items.map((prod) => <Item key={prod.id} {...prod}/>)}
+            </Row>
+        </Container>
     )
 }
-
-export default ItemList

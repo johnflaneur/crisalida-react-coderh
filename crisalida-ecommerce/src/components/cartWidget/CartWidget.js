@@ -1,13 +1,20 @@
-import React, { Component } from 'react'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { BsCart3 } from "react-icons/bs";
+import { CartContext } from '../../context/contextCart';
 import '../../components/cartWidget/CartWidget.css';
 
-export default class CartWidget extends Component {
-    render() {
+export const CartWidget = () => {
+
+    const {totalCantidad, cart} = useContext(CartContext)
+
         return (
-            <div>
-              <BsCart3 className="cart-icon"/>
-            </div>
-        )
-    }
+            <Link to="/cart">  
+            
+             <BsCart3 className="cart-icon"/>
+             <span>{totalCantidad()}</span>
+             </Link>
+            
+           )
+    
 }
