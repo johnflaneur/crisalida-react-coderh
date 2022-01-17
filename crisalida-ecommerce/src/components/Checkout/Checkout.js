@@ -40,7 +40,7 @@ export const Checkout = () => {
         const order = {
             buyer: values,
             items: carrito,
-            total: {totalBuy},
+            total: totalBuy(),
             date: Timestamp.fromDate( new Date() )
         }
   

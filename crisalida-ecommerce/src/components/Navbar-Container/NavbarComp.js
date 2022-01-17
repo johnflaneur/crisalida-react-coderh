@@ -23,9 +23,9 @@ export const NavbarComp = () =>{
                                 navbarScroll
                             > 
                              <NavDropdown className="products-title" title="Productos" id="navbarScrollingDropdown">
-                             <NavLink to="category/cabelloSeco"><NavDropdown.Item >Cabello Seco</NavDropdown.Item> </NavLink>
-                             <NavLink to="category/cabelloGraso"><NavDropdown.Item >Cabello Graso</NavDropdown.Item></NavLink> 
-                             <NavLink to="category/general"><NavDropdown.Item >General</NavDropdown.Item></NavLink>     
+                             <NavLink to="category/cabelloSeco">Cabello Seco</NavLink>
+                             <NavLink to="category/cabelloGraso">Cabello Graso</NavLink> 
+                             <NavLink to="category/general">General</NavLink>     
                             </NavDropdown>
                                 
                             </Nav>
