@@ -5,7 +5,8 @@ import { collection, getDocs, query, where, addDoc, documentId, Timestamp, write
 import { Link, Navigate } from 'react-router-dom'
 import { Loader } from '../Loader/Loader'
 import { Formik } from 'formik'
-import * as Yup from 'yup'
+import * as Yup from 'yup';
+import swal from 'sweetalert';
 
 const initialValues = { 
     nombre: "",
@@ -33,7 +34,15 @@ export const Checkout = () => {
     const [orderId, setOrderId] = useState(null)
     const [loading, setLoading] = useState(false)
 
-    
+    const alertBuy= () =>{
+        swal({
+            title: "¡Felicidades!",
+            text: "Su compra se ha hecho correctamente",
+            icon: "success",
+            button: "Aceptar"
+
+        })
+    }
 
     const handleSubmit = (values) => {
 
@@ -143,7 +152,7 @@ export const Checkout = () => {
                                 />
                                 {formik.errors.tel && <p className='alert alert-danger'>{formik.errors.tel}</p>}
 
-                                <button type='submit' className='btn btn-success'>Enviar</button>
+                                <button type='submit' onClick={()=>alertBuy()} className='btn btn-success'>Enviar</button>
                             </form>
                         )}
                     </Formik>
